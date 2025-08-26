@@ -17,6 +17,7 @@ const getAccessToken = async () => {
 
   return response.json();
 };
+
 export const topTracks = async () => {
   const { access_token } = await getAccessToken();
 
