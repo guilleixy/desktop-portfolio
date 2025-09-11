@@ -23,13 +23,34 @@ const spotifyFont = localFont({
   src: [
     {
       path: "../../public/fonts/spotify/Spotify-Regular.woff2",
-      weight: "700",
+      weight: "400",
       style: "normal",
+    },
+    {
+      path: "../../public/fonts/spotify/Spotify-Bold.woff2",
+      weight: "700",
+      style: "bold",
     },
   ],
   variable: "--font-spotify",
   display: "swap",
   adjustFontFallback: "Times New Roman",
+});
+
+const vscodeFont = localFont({
+  src: [
+    {
+      path: "../../public/fonts/vscode/CONSOLA.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/vscode/CONSOLAB.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+  variable: "--font-vscode",
 });
 
 export default function RootLayout({
@@ -40,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spotifyFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spotifyFont.variable} ${vscodeFont.variable} antialiased`}
       >
         {children}
       </body>

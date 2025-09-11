@@ -2,10 +2,13 @@
 
 :root {
   --background: #ffffff;
+  --foreground: #171717;
+
   --color-spotify-green: #57b660;
   --color-spotify-black: #181414;
   --color-spotify-white: #ffffff;
-  --color-spotify-grey-700: #211d1d;
+  --color-spotify-grey-800: #121212;
+  --color-spotify-grey-700: #1f1f1f;
   --color-spotify-grey-600: #2a2626;
   --color-spotify-grey-500: #343131;
   --color-spotify-grey-400: #464343;
@@ -13,7 +16,32 @@
   --color-spotify-grey-200: #747272;
   --color-spotify-grey-100: #8c8a8a;
   --color-spotify-grey-50: #8b8b8b;
-  --foreground: #171717;
+
+  --color-vscode-blue: #0078d4;
+  --color-vscode-dark-blue: #569cd6;
+  --color-vscode-text-blue: #9cdcfe;
+  --color-vscode-text-pink: #c586c0;
+  --color-vscode-text-dark-pink: #da65a1;
+  --color-vscode-text-grey: #808080;
+  --color-vscode-text-yellow: #dcdcaa;
+  --color-vscode-text-dark-yellow: #ffc911;
+  --color-vscode-green: #4ec9b0;
+  --color-vscode-orange: #ce9178;
+  --color-vscode-dark-grey: #181818;
+  --color-vscode-medium-grey: #1f1f1f;
+  --color-vscode-light-grey: #37373d;
+  --color-vscode-hover-grey: #2a2d2e;
+
+  --color-wikipedia-yellow: #f0e68c;
+  --font-wikipedia: sans-serif, Arial, Helvetica, system-ui;
+  --font-wikipedia-times: "Linux Libertine", "Georgia", "Times",
+    "Source Serif 4", serif;
+
+  /*TODO: Estos que se puedan cambiar según modo oscuro o claro*/
+  --color-chrome-dkr: #1f2020;
+  --color-chrome-dk: #282828;
+  --color-chrome-md: #3c3c3c;
+  --color-chrome-lt: #cae3d9;
 }
 
 @theme inline {
@@ -21,9 +49,11 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
   --color-spotify-green: var(--color-spotify-green);
   --color-spotify-black: var(--color-spotify-black);
   --color-spotify-white: var(--color-spotify-white);
+  --color-spotify-grey-800: var(--color-spotify-grey-800);
   --color-spotify-grey-700: var(--color-spotify-grey-700);
   --color-spotify-grey-600: var(--color-spotify-grey-600);
   --color-spotify-grey-500: var(--color-spotify-grey-500);
@@ -33,6 +63,26 @@
   --color-spotify-grey-100: var(--color-spotify-grey-100);
   --color-spotify-grey-50: var(--color-spotify-grey-50);
   --font-spotify: var(--font-spotify);
+
+  --color-vscode-blue: var(--color-vscode-blue);
+  --color-vscode-text-blue: var(--color-vscode-text-blue);
+  --color-vscode-dark-blue: var(--color-vscode-dark-blue);
+  --color-vscode-text-pink: var(--color-vscode-text-pink);
+  --color-vscode-text-dark-pink: var(--color-vscode-text-dark-pink);
+  --color-vscode-text-grey: var(--color-vscode-text-grey);
+  --color-vscode-text-yellow: var(--color-vscode-text-yellow);
+  --color-vscode-text-dark-yellow: var(--color-vscode-text-dark-yellow);
+  --color-vscode-green: var(--color-vscode-green);
+  --color-vscode-orange: var(--color-vscode-orange);
+  --color-vscode-dark-grey: var(--color-vscode-dark-grey);
+  --color-vscode-medium-grey: var(--color-vscode-medium-grey);
+  --color-vscode-light-grey: var(--color-vscode-light-grey);
+  --color-vscode-hover-grey: var(--color-vscode-hover-grey);
+  --font-vscode: var(--font-vscode);
+
+  --color-wikipedia-yellow: var(--color-wikipedia-yellow);
+  --font-wikipedia: var(--font-wikipedia);
+  --font-wikipedia-times: var(--font-wikipedia-times);
 }
 
 @media (prefers-color-scheme: dark) {
