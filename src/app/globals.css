@@ -83,6 +83,11 @@
   --color-wikipedia-yellow: var(--color-wikipedia-yellow);
   --font-wikipedia: var(--font-wikipedia);
   --font-wikipedia-times: var(--font-wikipedia-times);
+
+  --color-chrome-dkr: var(--color-chrome-dkr);
+  --color-chrome-dk: var(--color-chrome-dk);
+  --color-chrome-md: var(--color-chrome-md);
+  --color-chrome-lt: var(--color-chrome-lt);
 }
 
 @media (prefers-color-scheme: dark) {
