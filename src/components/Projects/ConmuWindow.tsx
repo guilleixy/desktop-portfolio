@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import ChromeWindow from "../Chrome/ChromeWindow";
+import Image from "next/image";
 
 // simple linear interpolation
 const lerp = (start: number, end: number, factor: number) =>
@@ -66,13 +67,13 @@ export default function ConmuWindow() {
 
     const animate = () => {
       setEye1((prev) => ({
-        x: lerp(prev.x, target1.x, 0.15), // faster response
-        y: lerp(prev.y, target1.y, 0.15),
+        x: lerp(prev.x, target1.x, 0.3), // faster response
+        y: lerp(prev.y, target1.y, 0.3),
       }));
 
       setEye2((prev) => ({
-        x: lerp(prev.x, target2.x, 0.08), // slower response
-        y: lerp(prev.y, target2.y, 0.08),
+        x: lerp(prev.x, target2.x, 0.16), // slower response
+        y: lerp(prev.y, target2.y, 0.16),
       }));
 
       frame = requestAnimationFrame(animate);
@@ -86,13 +87,45 @@ export default function ConmuWindow() {
     <ChromeWindow title="Google" url="www.google.com" favicon="/favicon.ico">
       <div
         ref={containerRef}
-        className="bg-black h-full flex items-center justify-center"
+        className="bg-black h-full flex p-5 font-helvetica flex-col"
       >
-        <div
+        <div>
+          <Image
+            src="assets/images/projects/conmu/conmu_logo.svg"
+            alt="conmu logo"
+            width={213}
+            height={101}
+          />
+        </div>
+        <div>
+          <div>
+            <p className="font-bold">
+              Discover what people are listening around you!
+            </p>
+            <p>Interact with a live map where everyone shares </p>
+          </div>
+          <div>
+            <div>
+              <p className="font-bold">
+                Get notified when you walked near someone with similar music
+                taste!
+              </p>
+              <p>
+                Sync with Spotify to import your favourite groups automatically
+              </p>
+            </div>
+          </div>
+          <div>
+            <p>Everyones anonymous for extra safety!</p>
+          </div>
+          <div>
+            <p>Built with React Native and Tailwind</p>
+          </div>
+        </div>
+        {/* <div
           ref={circleRef}
           className="h-[100px] w-[100px] bg-[#3efd71] rounded-full relative"
         >
-          {/* Eye 1 */}
           <div
             className="h-[20px] w-[20px] bg-black rounded-full absolute"
             style={{
@@ -101,8 +134,6 @@ export default function ConmuWindow() {
               transform: `translate(calc(-50% + ${eye1.x}px), calc(-50% + ${eye1.y}px))`,
             }}
           ></div>
-
-          {/* Eye 2 */}
           <div
             className="h-[20px] w-[20px] bg-black rounded-full absolute"
             style={{
@@ -111,7 +142,7 @@ export default function ConmuWindow() {
               transform: `translate(calc(-50% + ${eye2.x}px), calc(-50% + ${eye2.y}px))`,
             }}
           ></div>
-        </div>
+        </div> */}
       </div>
     </ChromeWindow>
   );

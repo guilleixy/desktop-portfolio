@@ -18,10 +18,8 @@ export default function VSCodeLeftTabs() {
         <div className="text-zinc-400">.next</div>
         <div className="text-zinc-400">node_modules</div>
         <div>public</div>
-        <div className="ml-2">assets</div>
-        <div className="ml-4">images</div>
-        <div className="ml-6">do_not_open.png</div>
-        <div className="ml-4">fonts</div>
+        <div className="ml-2">images</div>
+        <div className="ml-4">do_not_open.png</div>
         <div>src</div>
         <div className="ml-2">app</div>
         <div className="ml-2">components</div>
@@ -39,15 +37,12 @@ export default function VSCodeLeftTabs() {
         </VSCodeTab>
         <div>VSCodeLayout.tsx</div>
         <div>lib</div>
-        <div>utils</div>
         <div className="text-zinc-400">.env</div>
         <div>.gitignore</div>
-        <div>eslint.config.js</div>
         <div>next.config.js</div>
         <div>package.json</div>
         <div>postcss.config.js</div>
         <div>README.md</div>
-        <div>tsconfig.json</div>
       </div>
     </TabList>
   );

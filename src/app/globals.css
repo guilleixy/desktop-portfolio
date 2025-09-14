@@ -88,6 +88,8 @@
   --color-chrome-dk: var(--color-chrome-dk);
   --color-chrome-md: var(--color-chrome-md);
   --color-chrome-lt: var(--color-chrome-lt);
+
+  --font-helvetica: var(--font-helvetica);
 }
 
 @media (prefers-color-scheme: dark) {

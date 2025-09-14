@@ -53,6 +53,24 @@ const vscodeFont = localFont({
   variable: "--font-vscode",
 });
 
+const helvetica = localFont({
+  src: [
+    {
+      path: "../../public/fonts/conmu/Helvetica.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/conmu/Helvetica-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica",
+  display: "swap",
+  adjustFontFallback: "Times New Roman",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spotifyFont.variable} ${vscodeFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${helvetica.variable} ${spotifyFont.variable} ${vscodeFont.variable} antialiased`}
       >
         {children}
       </body>
