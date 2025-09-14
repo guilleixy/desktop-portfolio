@@ -10,10 +10,12 @@ export default function Home() {
       <div className="fixed h-screen w-screen z-[-1]">
         <Scene />
       </div>
-      {/* <ConmuWindow />
-      <WikipediaLayout />
+      {/* 
+      <ConmuWindow />
+      
+      <WikipediaLayout />*/}
       <VSCodeLayout />
-      <SpotifyLayout /> */}
+      <SpotifyLayout />
     </div>
   );
 }

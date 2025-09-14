@@ -1,8 +1,12 @@
-import { Tab, TabList, TabPanel } from "../tabs/Tabs";
-import { TabsProvider, useTabs } from "../tabs/TabsContext";
-import ReactIconSVG from "./ReactIconSVG";
+"use client";
+
+import { TabPanel } from "../tabs/Tabs";
+import { TabsProvider } from "../tabs/TabsContext";
 import VSCodeLeftTabs, { VSCodeTopTabs } from "./VSCodeTabs";
 import VSCodeWindow from "./VSCodeWindow";
+import { useRef } from "react";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Tab1Lines = [
   <div className="ml-2 text-vscode-text-pink">
@@ -176,9 +180,35 @@ const Tab3Lines = [
 ];
 
 export default function VSCodeLayout() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current) return;
+
+    const tl = gsap.timeline();
+
+    gsap.set(containerRef.current, {
+      scaleX: 0,
+      scaleY: 0,
+      transformOrigin: "center center",
+    });
+
+    tl.to(containerRef.current, {
+      scaleX: 1,
+      duration: 0.6,
+      ease: "power3.out",
+    }).to(containerRef.current, {
+      scaleY: 1,
+      duration: 0.6,
+      ease: "power3.out",
+    });
+  }, []);
+
   return (
-    <div className="h-[80dvh] w-[70dvw] border-[#343434] mt-10 ml-10 border-1 rounded-lg font-vscode flex flex-col bg-vscode-dark-grey text-sm">
-      <div></div>
+    <div
+      ref={containerRef}
+      className="h-[80dvh] w-[70dvw] border-[#343434] mt-10 ml-10 border rounded-lg font-vscode flex flex-col bg-vscode-dark-grey text-sm overflow-hidden"
+    >
       <div className="flex-grow flex overflow-hidden">
         <div className="flex flex-col">iconos</div>
         <TabsProvider defaultTab="react">
