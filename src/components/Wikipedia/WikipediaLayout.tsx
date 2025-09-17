@@ -2,7 +2,7 @@ import WikipediaProfile from "./WikipediaProfile";
 
 export default function WikipediaLayout() {
   return (
-    <div className="h-[80dvh] w-[70dvw] border-[#343434] border-1 rounded-lg p-[9px] font-wikipedia bg-white text-black">
+    <div className="h-[80dvh] w-[70dvw] border-[#343434] border-1 rounded-lg p-[9px] font-wikipedia bg-white text-black fixed top-[10dvh] left-[20dvw]">
       <div className="flex w-full  justify-between items-center">
         <h2 className="font-wikipedia-times">Guillermo Bernal</h2>
         <select>

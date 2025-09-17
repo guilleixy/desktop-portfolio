@@ -207,7 +207,7 @@ export default function VSCodeLayout() {
   return (
     <div
       ref={containerRef}
-      className="h-[80dvh] w-[70dvw] border-[#343434] mt-10 ml-10 border rounded-lg font-vscode flex flex-col bg-vscode-dark-grey text-sm overflow-hidden"
+      className="h-[80dvh] w-[70dvw] border-[#343434] mt-10 ml-10 border rounded-lg font-vscode flex flex-col bg-vscode-dark-grey text-sm overflow-hidden fixed"
     >
       <div className="flex-grow flex overflow-hidden">
         <div className="flex flex-col">iconos</div>

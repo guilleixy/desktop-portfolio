@@ -66,6 +66,11 @@ const helvetica = localFont({
       weight: "700",
       style: "normal",
     },
+    {
+      path: "../../public/fonts/conmu/Helvetica-BOldOblique.ttf",
+      weight: "700",
+      style: "italic",
+    },
   ],
   variable: "--font-helvetica",
   display: "swap",
